@@ -1,0 +1,41 @@
+@ContosoPizza_HostAddress = http://localhost:5009
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
+
+POST {{ContosoPizza_HostAddress}}/pizza/
+Content-Type: application/json
+
+{
+    "name": "Perpperoni",
+    "isGlutenFree": false
+}
+
+###
+
+PUT {{ContosoPizza_HostAddress}}/pizza/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Classic Italian",
+    "isGlutenFree": false
+}
+
+###
+
+GET {{ContosoPizza_HostAddress}}/pizza/3
+Accept: application/json
+
+###
+
+DELETE {{ContosoPizza_HostAddress}}/pizza/2
+
+###
+
+GET {{ContosoPizza_HostAddress}}/pizza/
+Accept: application/json
+
+###
